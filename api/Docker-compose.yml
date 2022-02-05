@@ -4,6 +4,6 @@ services: # Contain all the Docker services you want to start
             context: .
         image: ghcr.io/vj74/fastapi-sound
         ports: # Enter a list of all the ports that should be mapped
-            - 8000:80 # Map port 8000 on our VIRTUAL MACHINE to port 80 on our DOCKER CONTAINER
-        #volumes:
-            #- ./data:/mnt/data/storage
+            - 8000:3000 # Map port 8000 on our VIRTUAL MACHINE to port 80 on our DOCKER CONTAINER
+        volumes:
+            - ./data:/data/storage
